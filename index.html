@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Dashboard Mini Apps</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <h1>API Dashboard</h1>
+      <p>8 mini apps • fetch + async/await • DOM updates</p>
+    </header>
+
+    <main class="grid">
+      <!-- 1) Dog -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>🐶 Random Dog</h2>
+          <button class="btn" id="dogBtn">New dog</button>
+        </div>
+        <div class="cell-body">
+          <div class="status" id="dogStatus"></div>
+          <img id="dogImg" class="media" alt="Random dog" />
+        </div>
+      </section>
+
+      <!-- 2) Cat -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>🐱 Random Cat</h2>
+          <button class="btn" id="catBtn">New cat</button>
+        </div>
+        <div class="cell-body">
+          <div class="status" id="catStatus"></div>
+          <img id="catImg" class="media" alt="Random cat" />
+        </div>
+      </section>
+
+      <!-- 3) Weather -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>🌤️ Weather</h2>
+        </div>
+        <div class="cell-body">
+          <div class="row">
+            <input id="cityInput" class="input" placeholder="Enter a city (e.g., Chicago)" />
+            <button class="btn" id="weatherBtn">Get</button>
+          </div>
+          <div class="status" id="weatherStatus"></div>
+          <div class="card" id="weatherCard"></div>
+        </div>
+      </section>
+
+      <!-- 4) Currency -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>💱 Currency</h2>
+        </div>
+        <div class="cell-body">
+          <div class="row">
+            <input id="usdInput" class="input" type="number" min="0" step="0.01" value="1" />
+            <button class="btn" id="fxBtn">Convert</button>
+          </div>
+          <div class="status" id="fxStatus"></div>
+          <div class="card" id="fxCard"></div>
+        </div>
+      </section>
+
+      <!-- 5) Movies (TVMaze as “trending-style” no key) -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>🎬 Trending Shows</h2>
+          <button class="btn" id="showsBtn">Refresh</button>
+        </div>
+        <div class="cell-body">
+          <div class="status" id="showsStatus"></div>
+          <ul class="list" id="showsList"></ul>
+        </div>
+      </section>
+
+      <!-- 6) GitHub user -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>🧑‍💻 GitHub User</h2>
+        </div>
+        <div class="cell-body">
+          <div class="row">
+            <input id="ghInput" class="input" placeholder="username (e.g., torvalds)" />
+            <button class="btn" id="ghBtn">Search</button>
+          </div>
+          <div class="status" id="ghStatus"></div>
+          <div class="profile" id="ghProfile"></div>
+        </div>
+      </section>
+
+      <!-- 7) Joke -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>😂 Random Joke</h2>
+          <button class="btn" id="jokeBtn">New joke</button>
+        </div>
+        <div class="cell-body">
+          <div class="status" id="jokeStatus"></div>
+          <div class="card" id="jokeCard"></div>
+        </div>
+      </section>
+
+      <!-- 8) API of choice: Countries -->
+      <section class="cell">
+        <div class="cell-head">
+          <h2>🌍 Country Lookup</h2>
+        </div>
+        <div class="cell-body">
+          <div class="row">
+            <input id="countryInput" class="input" placeholder="Country (e.g., Japan)" />
+            <button class="btn" id="countryBtn">Find</button>
+          </div>
+          <div class="status" id="countryStatus"></div>
+          <div class="card" id="countryCard"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Built with vanilla JS • async/await • public APIs
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
