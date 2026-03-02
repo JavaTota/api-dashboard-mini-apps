@@ -101,7 +101,7 @@ async function loadWeather() {
 }
 weatherBtn.addEventListener("click", loadWeather);
 
-// ---------- 4) Currency (Frankfurter, no key) ----------
+// ---------- 4) Currency  ----------
 const usdInput = document.getElementById("usdInput");
 const fxBtn = document.getElementById("fxBtn");
 const fxStatus = document.getElementById("fxStatus");
@@ -134,7 +134,7 @@ async function loadFX() {
 }
 fxBtn.addEventListener("click", loadFX);
 
-// ---------- 5) “Trending” shows (TVMaze, no key) ----------
+// ---------- 5) “Trending” shows  ----------
 const showsBtn = document.getElementById("showsBtn");
 const showsStatus = document.getElementById("showsStatus");
 const showsList = document.getElementById("showsList");
@@ -144,7 +144,6 @@ async function loadShows() {
     setStatus(showsStatus, "Loading...");
     showsList.innerHTML = "";
 
-    // TVMaze: list of shows (not truly "trending" but good for display)
     const data = await safeFetchJson("https://api.tvmaze.com/shows");
 
     const top10 = data.slice(0, 10);
